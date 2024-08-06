@@ -4,7 +4,7 @@ with open('README.md') as f:
     long_description = f.read()
 
 setup(
-    name="pachira",
+    name="pachira-python",
     version="0.0.1",
     description="Python library for Pachira on DeFi, data research and integration",
     long_description=long_description,
@@ -16,9 +16,15 @@ setup(
     package_dir = {"pachira": "python/prod"},
     packages=[
         "pachira",
-        "pachira.explorer"
+        "pachira.event",
+        "pachira.abi"
     ],
-    install_requires=["requests, blockscout-python"],
+    install_requires=['web3', 
+                      'eth_abi', 
+                      'eth_typing', 
+                      'eth_utils', 
+                      'hexbytes', 
+                      'blockscout-python == 0.1.2'],
     include_package_data=True,
     zip_safe=False,
 )
