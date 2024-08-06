@@ -17,13 +17,17 @@ setup(
     packages=[
         "pachira",
         "pachira.event",
-        "pachira.abi"
+        "pachira.abi",
+        "pachira.utils",
+        "pachira.data"
     ],
     install_requires=['web3', 
                       'eth_abi', 
                       'eth_typing', 
+                      'eth_bloom',
                       'eth_utils', 
                       'hexbytes', 
+                      'pandas',
                       'blockscout-python == 0.1.2'],
     include_package_data=True,
     zip_safe=False,

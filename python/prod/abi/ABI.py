@@ -8,7 +8,6 @@ We also provide some helper functions to deal with ABI encode/decode.
 `See Github for available contracts ABI files <https://github.com/tradingstrategy-ai/web3-ethereum-defi/tree/master/eth_defi/abi>`_.
 """
 
-import pachira
 import json
 import re
 from functools import lru_cache
@@ -58,8 +57,9 @@ class ABI:
         :return: Full contract interface, including `bytecode`.
         """
     
-        here = Path(__file__).resolve().parent
+        here = Path(__file__).resolve().parent        
         abi_path = here / Path(fname)
+        abi_path = str(abi_path).replace("abi/","configs/")
         with open(abi_path, "rt", encoding="utf-8") as f:
             abi = json.load(f)
         return abi
