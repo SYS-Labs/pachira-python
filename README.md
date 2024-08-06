@@ -9,4 +9,4 @@ Pachira python library for DeFi event reading, data research and integration.
 
 ## Sushi + Uniswap V2
 
-* See [test notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/test.ipynb) for basic usage
+* See [test notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/univ2_swap.ipynb) for basic usage

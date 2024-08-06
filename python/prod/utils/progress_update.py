@@ -1,5 +1,5 @@
 from typing import Optional, Protocol
-from eth_defi.event_reader.logresult import LogContext
+from ..event.log_context import LogContext
 
 # For typing.Protocol see https://stackoverflow.com/questions/68472236/type-hint-for-callable-that-takes-kwargs
 class ProgressUpdate(Protocol):

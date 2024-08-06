@@ -16,13 +16,12 @@ from typing import Callable, Optional, Iterable, Dict, List
 from eth_bloom import BloomFilter
 from hexbytes import HexBytes
 
-from .filter import Filter
 from .conversion import Conversion
-from ..utils.progress_update import ProgressUpdate
 from .log_context import LogContext
 from .log_result import LogResult
-
-from eth_defi.event_reader.reorganisation_monitor import ReorganisationMonitor
+from ..utils.progress_update import ProgressUpdate
+from ..data.filter import Filter
+from ..data.reorganization_monitor import ReorganizationMonitor
 
 logger = logging.getLogger(__name__)
 
@@ -68,7 +67,7 @@ class ReadEvents:
         context: Optional[LogContext] = None,
         extract_timestamps: Optional[Callable] = extract_timestamps_json_rpc,
         filter: Optional[Filter] = None,
-        reorg_mon: Optional[ReorganisationMonitor] = None,
+        reorg_mon: Optional[ReorganizationMonitor] = None,
     ) -> Iterable[LogResult]:
         """Reads multiple events from the blockchain.
     
@@ -255,7 +254,7 @@ class ReadEvents:
         filter: Filter,
         context: Optional[LogContext] = None,
         extract_timestamps: Optional[Callable] = extract_timestamps_json_rpc,
-        reorg_mon: Optional[ReorganisationMonitor] = None,
+        reorg_mon: Optional[ReorganizationMonitor] = None,
     ) -> Iterable[LogResult]:
         """Perform eth_getLogs call over a block range.
     

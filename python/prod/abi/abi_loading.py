@@ -33,7 +33,7 @@ from eth_defi.utils import ZERO_ADDRESS_STR
 # How big are our ABI and contract caches
 _CACHE_SIZE = 512
 
-class ABI:
+class ABILoading:
 
     def __init__(self):
         pass

@@ -19,7 +19,8 @@ setup(
         "pachira.event",
         "pachira.abi",
         "pachira.utils",
-        "pachira.data"
+        "pachira.data",
+        "pachira.enums"
     ],
     install_requires=['web3', 
                       'eth_abi', 
