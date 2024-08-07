@@ -27,6 +27,7 @@ setup(
                       'eth_typing', 
                       'eth_bloom',
                       'eth_utils', 
+                      'web3-ethereum-defi',
                       'hexbytes', 
                       'pandas',
                       'blockscout-python == 0.1.2'],
