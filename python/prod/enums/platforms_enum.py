@@ -4,3 +4,4 @@ from dataclasses import dataclass
 class PlatformsEnum:
     SUSHI: str = "sushi"
     PACHIRA: str = "pachira"
+    UNIV3: str = "uniswap_v3"

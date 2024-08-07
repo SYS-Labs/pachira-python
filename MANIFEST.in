@@ -1,1 +1,3 @@
 include python/prod/configs/sushi/UniswapV2Pair.json
+include python/prod/configs/uniswap_v3/UniswapV3Pool.json
+include python/prod/configs/uniswap_v3/UniswapV3Factory.json
