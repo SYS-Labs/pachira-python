@@ -13,3 +13,7 @@ Pachira python library for DeFi event reading, data research and integration.
 * Mint: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/univ2/mint.ipynb) 
 * Burn: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/univ2/burn.ipynb) 
 * Transfer: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/univ2/transfer.ipynb) 
+
+## Uniswap V3 
+
+* Swap: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/univ3/swap.ipynb) 
