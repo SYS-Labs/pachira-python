@@ -5,7 +5,7 @@ with open('README.md') as f:
 
 setup(
     name="pachira-python",
-    version="0.0.1",
+    version="0.0.2",
     description="Python library for Pachira on DeFi, data research and integration",
     long_description=long_description,
     long_description_content_type="text/markdown",    
@@ -20,11 +20,14 @@ setup(
         "pachira.abi",
         "pachira.utils",
         "pachira.data",
-        "pachira.enums"
+        "pachira.enums",
+        "pachira.token",
+        "pachira.contract"
     ],
     install_requires=['web3', 
                       'eth_abi', 
-                      'eth_typing', 
+                      'eth_typing',
+                      'eth_tester',
                       'eth_bloom',
                       'eth_utils', 
                       'web3-ethereum-defi',

@@ -8,6 +8,9 @@ from .event.read_events import ReadEvents
 from .data.reorganization_monitor import ReorganizationMonitor
 from .data.chain_reorganization_resolution import ChainReorganizationResolution
 from .utils.progress_update import ProgressUpdate
+from .utils.base_utils import BaseUtils
+from .contract.deploy import Deploy
+from .token.token import Token
 from .enums.nets_enum import NetsEnum as Net
 from .enums.rpcs_enum import RPCEnum as RPC
 from .enums.platforms_enum import PlatformsEnum as Platform

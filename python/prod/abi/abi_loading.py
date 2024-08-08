@@ -211,11 +211,11 @@ class ABILoading:
     
         if register_for_tracing:
             # TODO: Currently hack around circular imports, move functoins
-            from eth_defi.deploy import get_registered_contract, register_contract
+            from pachira.contract.deploy import Deploy
     
-            registered_contract = self.get_registered_contract(web3, address)
+            registered_contract = Deploy().get_registered_contract(web3, address)
             if registered_contract is None:
-                register_contract(web3, address, contract)
+                Deploy().register_contract(web3, address, contract)
     
         return contract
     
