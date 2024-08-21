@@ -10,6 +10,8 @@ from .data.chain_reorganization_resolution import ChainReorganizationResolution
 from .utils.progress_update import ProgressUpdate
 from .utils.base_utils import BaseUtils
 from .contract.deploy import Deploy
+from .uniswap_v2.pair import PairDetails
+from .uniswap_v2.fetch_pair_details import FetchPairDetails
 from .token.token import Token
 from .enums.nets_enum import NetsEnum as Net
 from .enums.rpcs_enum import RPCEnum as RPC

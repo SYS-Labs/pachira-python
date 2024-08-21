@@ -7,3 +7,8 @@ class JSONContractsEnum:
     UniswapV2Factory: str = "UniswapV2Factory"
     UniswapV3Pool: str = "UniswapV3Pool"
     UniswapV3Factory: str = "UniswapV3Factory"
+    UniV2IndexedYieldLinearExitPool: str = "UniV2IndexedYieldLinearExitPool"
+    MintableRCIndexedYieldLinearExitPoolStudy: str = "MintableRCIndexedYieldLinearExitPoolStudy"
+
+
+

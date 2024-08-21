@@ -7,3 +7,4 @@ class NetsEnum:
     ARB: str = "arbitrum"
     OP: str = "optimism"
     POLYGON: str = "polygon"
+    LOCALHOST: str = "localhost"

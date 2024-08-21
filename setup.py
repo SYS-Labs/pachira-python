@@ -22,7 +22,8 @@ setup(
         "pachira.data",
         "pachira.enums",
         "pachira.token",
-        "pachira.contract"
+        "pachira.contract",
+        "pachira.uniswap_v2"
     ],
     install_requires=['web3', 
                       'eth_abi', 
