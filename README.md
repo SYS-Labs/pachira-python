@@ -7,7 +7,14 @@ Pachira python library for DeFi event reading, data research and integration.
 > pip install .
 ```
 
-## Uniswap V2: Sushi 
+## Pachira Testnet: localhost 
+
+* Basepool: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/localnode/testnet_basepool.ipynb)
+* Indexpool: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/localnode/testnet_indexpool.ipynb)
+* RCStudy: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/localnode/testnet_rcstudy.ipynb) 
+
+
+## Uniswap V2: Polygon 
 
 * Swap: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/univ2/swap.ipynb) 
 * Mint: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/univ2/mint.ipynb) 
@@ -15,7 +22,7 @@ Pachira python library for DeFi event reading, data research and integration.
 * Transfer: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/univ2/transfer.ipynb)
 * Oracle: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/univ2/oracle.ipynb) 
 
-## Uniswap V3 
+## Uniswap V3: Polygon
 
 * Swap: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/univ3/swap.ipynb)
 * Mint: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/univ3/mint.ipynb)
