@@ -13,7 +13,7 @@ Pachira python library for DeFi event reading, data research and integration.
 * Indexpool: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/localnode/testnet_indexpool.ipynb)
 * RCStudy: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/localnode/testnet_rcstudy.ipynb) 
 
-## Uniswap V2: Polygon 
+## Sushi Uniswap V2: Polygon 
 
 * Swap: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/univ2/swap.ipynb) 
 * Mint: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/sushi/univ2/mint.ipynb) 
