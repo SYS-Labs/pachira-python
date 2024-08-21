@@ -7,7 +7,7 @@ Pachira python library for DeFi event reading, data research and integration.
 > pip install .
 ```
 
-## Pachira Testnet: localhost 
+## Pachira Uniswap V2: Localhost Testnet
 
 * Basepool: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/localnode/testnet_basepool.ipynb)
 * Indexpool: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/localnode/testnet_indexpool.ipynb)
