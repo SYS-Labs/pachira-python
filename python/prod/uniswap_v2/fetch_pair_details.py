@@ -1,7 +1,7 @@
-from ..abi.abi_loading import ABILoading
-from .pair import PairDetails
 from typing import Union, Optional
 from eth_typing import HexAddress
+from ..abi.abi_loading import ABILoading
+from ..data.pair import PairDetails
 from ..token.token import Token
 
 class FetchPairDetails:

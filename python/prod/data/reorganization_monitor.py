@@ -4,7 +4,11 @@ from typing import Dict, Optional, Type, Callable, Tuple, Iterable
 from abc import *
 from tqdm import tqdm
 from .chain_reorganization_resolution import ChainReorganizationResolution
+from ..event.chain_reorganization_detection import ChainReorganizationDetected
 import pandas as pd
+
+
+logger = logging.getLogger(__name__)
 
 from eth_defi.event_reader.block_header import BlockHeader, Timestamp
 
@@ -255,14 +259,14 @@ class ReorganizationMonitor(ABC):
 
         If we do not have records, ignore.
 
-        :raise ChainReorganisationDetected:
+        :raise ChainReorganizationDetected:
             When any if the block data in our internal buffer
             does not match those provided by events.
         """
         original_block = self.block_map.get(block_number)
         if original_block is not None:
             if original_block.block_hash != block_hash:
-                raise ChainReorganisationDetected(block_number, original_block.block_hash, block_hash)
+                raise ChainReorganizationDetected(block_number, original_block.block_hash, block_hash)
 
             return original_block.timestamp
 
@@ -293,7 +297,7 @@ class ReorganizationMonitor(ABC):
 
             Set `None` to ignore.
 
-        :raise ChainReorganisationDetected:
+        :raise ChainReorganizationDetected:
             When any if the block data in our internal buffer
             does not match those provided by events.
         """
@@ -349,8 +353,8 @@ class ReorganizationMonitor(ABC):
         while tries_left > 0:
             try:
                 self.figure_reorganisation_and_new_blocks()
-                return ChainReorganisationResolution(self.last_block_read, max_purge, reorg_detected=reorg_detected)
-            except ChainReorganisationDetected as e:
+                return ChainReorganizationResolution(self.last_block_read, max_purge, reorg_detected=reorg_detected)
+            except ChainReorganizationDetected as e:
                 logger.info("Chain reorganisation detected: %s", e)
 
                 latest_good_block = e.block_number - 1

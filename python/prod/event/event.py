@@ -3,8 +3,13 @@
 
 from abc import *
 
-class Record(ABC):
+class Event(ABC):
              
     @abstractmethod        
-    def apply(self, event, abi_load):
+    def record(self, event, abi_load):
         pass
+
+    @abstractmethod        
+    def filter(self, contract):
+        pass
+
