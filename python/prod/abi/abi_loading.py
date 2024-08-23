@@ -30,13 +30,30 @@ from web3.datastructures import AttributeDict
 
 from eth_defi.utils import ZERO_ADDRESS_STR
 
+from ..enums.platforms_enum import PlatformsEnum
+from ..enums.contracts_enum import JSONContractsEnum
+
+DEFAULT_CONTRACT = JSONContractsEnum.IUniswapV2Pair
+DEFAULT_PLATFORM = PlatformsEnum.PACHIRA
+
 # How big are our ABI and contract caches
 _CACHE_SIZE = 512
 
 class ABILoading:
 
-    def __init__(self):
-        pass
+    def __init__(self, platform = None, contract = None):
+        self.__platform_name = DEFAULT_PLATFORM if platform == None else platform
+        self.__contract_name = DEFAULT_CONTRACT if contract == None else contract
+        self.__abi_path = self.__platform_name + '/' + self.__contract_name + '.json'
+
+    def apply(self, web3: Web3):
+        return self.get_contract(web3, self.__abi_path)  
+
+    def get_contract_name(self):
+        return self.__contract_name
+
+    def get_platform_name(self):
+        return self.__platform_name    
 
     @lru_cache(maxsize=_CACHE_SIZE)
     def get_abi_by_filename(self, fname: str) -> dict:

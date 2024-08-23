@@ -2,6 +2,7 @@ from dataclasses import dataclass
 
 @dataclass(frozen=True)
 class JSONContractsEnum:
+    IUniswapV2Pair: str = "IUniswapV2Pair"
     UniswapV2Pair: str = "UniswapV2Pair"
     UniswapV2Router02: str = "UniswapV2Router02"
     UniswapV2Factory: str = "UniswapV2Factory"
