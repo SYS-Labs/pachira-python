@@ -4,7 +4,7 @@ from typing import Dict, Optional, Type, Callable, Tuple, Iterable
 from abc import *
 from tqdm import tqdm
 from .chain_reorganization_resolution import ChainReorganizationResolution
-from ..event.chain_reorganization_detection import ChainReorganizationDetected
+from ..event.tools.chain_reorganization_detection import ChainReorganizationDetected
 import pandas as pd
 
 

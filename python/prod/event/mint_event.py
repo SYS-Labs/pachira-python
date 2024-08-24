@@ -4,7 +4,7 @@
 from web3 import Web3
 from .event import Event
 from ..data.filter import Filter
-from .conversion import Conversion
+from .tools.conversion import Conversion
 from ..utils.connect import ConnectW3
 
 class MintEvent(Event):

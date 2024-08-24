@@ -5,7 +5,7 @@ with open('README.md') as f:
 
 setup(
     name="pachira-python",
-    version="0.0.2",
+    version="0.0.3",
     description="Python library for Pachira on DeFi, data research and integration",
     long_description=long_description,
     long_description_content_type="text/markdown",    
@@ -17,6 +17,8 @@ setup(
     packages=[
         "pachira",
         "pachira.event",
+        "pachira.event.tools",
+        "pachira.event.process",
         "pachira.abi",
         "pachira.utils",
         "pachira.data",
