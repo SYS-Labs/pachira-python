@@ -181,11 +181,11 @@ dict_events
 
 ## Pachira Uniswap V2: Localhost Testnet
 
-* Basepool Events: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/pachira/test_basepool_events.ipynb)
+* Basepool Events (ie, Swap, Mint, Sync, Burn, Transfer): see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/pachira/test_basepool_events.ipynb)
 
 ## Sushi Uniswap V2: Polygon 
 
-* Events: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/pachira/test_univ2_events.ipynb)
+* Events (ie, Swap, Mint, Sync, Burn, Transfer): see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/pachira/test_univ2_events.ipynb)
 
 ## Uniswap V3: Polygon
 
