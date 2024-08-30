@@ -13,7 +13,36 @@ or
 > pip install pachira-python
 ```
 
+## Implementation: View Contract
 
+```
+from pachira import *
+
+base_pool_addr = '0x5FC8d32690cc91D4c39d9d3abcBD16989F875707'
+
+connect = ConnectW3(Net.LOCALHOST)
+connect.apply()
+
+abi = ABILoading(Platform.PACHIRA, JSONContract.UniV2IndexedYieldLinearExitPool)
+vContract = ViewContract(connect, abi)
+view_fns_res = vContract.apply(index_pool_addr)
+view_fns_res
+```
+
+```javascript
+{'basePool': '0x387E3656De052275554f8D8B78C4B1a9B088345C',
+ 'basePoolLocalBal': 99999999999999999999023,
+ 'getTokensIn': ['0x387E3656De052275554f8D8B78C4B1a9B088345C',
+  '0xfAEFac1C9e8AF3a030857C4e61066f0a510253AF',
+  '0x0000000000000000000000000000000000000000'],
+ 'getTokensOut': ['0x387E3656De052275554f8D8B78C4B1a9B088345C',
+  '0xfAEFac1C9e8AF3a030857C4e61066f0a510253AF',
+  '0x0000000000000000000000000000000000000000'],
+ 'token0': '0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0',
+ 'token1': '0xfAEFac1C9e8AF3a030857C4e61066f0a510253AF',
+ 'totalSupply': 199999999999999999998023,
+ 'yieldToken': '0x387E3656De052275554f8D8B78C4B1a9B088345C'}
+```
 
 ## Implementation: Swap Events
 
