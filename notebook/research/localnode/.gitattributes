@@ -1,0 +1,7 @@
+# Jupyter notebook
+
+# text count
+*.ipynb text
+*.ipynb linguist-documentation
+
+
