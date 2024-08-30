@@ -15,6 +15,8 @@ or
 
 ## Implementation: View Contract
 
+To connect to Net.LOCALHOST, must run local testnet instance, see [here](https://github.com/misesmind/indexeddefi/tree/pools)
+
 ```
 from pachira import *
 
