@@ -7,6 +7,14 @@ Pachira python library for DeFi event reading, data research and integration.
 > pip install .
 ```
 
+or 
+
+```
+> pip install pachira-python
+```
+
+
+
 ## Implementation: Swap Events
 
 ```
