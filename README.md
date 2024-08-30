@@ -13,7 +13,7 @@ or
 > pip install pachira-python
 ```
 
-## Implementation: View Contract
+## Implementation: Testnet View Contract
 
 To connect to Net.LOCALHOST, must run local testnet instance, see [here](https://github.com/misesmind/indexeddefi/tree/pools)
 
