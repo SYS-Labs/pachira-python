@@ -7,7 +7,7 @@ Pachira python library for DeFi event reading, data research and integration.
 > pip install .
 ```
 
-## Implementation: Testnet View Contract
+## Implementation: View Contract (Pachira Testnet)
 
 To connect to Net.LOCALHOST, must run local testnet instance, see [here](https://github.com/misesmind/indexeddefi/tree/pools)
 
@@ -41,7 +41,7 @@ view_fns_res
 ```
 
 
-## Implementation: Testnet Mint Events
+## Implementation: Basepool Mint Events (Pachira Testnet)
 
 ```
 from pachira import *
@@ -96,7 +96,7 @@ dict_events
    'amount1Out': 24}}}
 ```
 
-## Implementation: Polygon Swap Events
+## Implementation: UniV2 Swap Events (Polygon)
 
 ```
 from pachira import *
