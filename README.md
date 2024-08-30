@@ -19,6 +19,7 @@ connect.apply()
 rEvents = RetrieveEvents(connect, abi)
 last_block = rEvents.latest_block()
 start_block = last_block - 3
+dict_events = rEvents.apply(EventType.SWAP, start_block=start_block, end_block=last_block)
 ```
 
 ```javascript
@@ -30,7 +31,6 @@ swap at block:61,234,918 tx:0x9f16c76b6a83ac424ea736fb7dd2b1fc735888f222ee04dc1b
 ```
 
 ```
-dict_events = rEvents.apply(EventType.SWAP, start_block=start_block, end_block=last_block)
 dict_events
 ```
 
