@@ -46,7 +46,63 @@ view_fns_res
  'yieldToken': '0x387E3656De052275554f8D8B78C4B1a9B088345C'}
 ```
 
-## Implementation: Swap Events
+
+## Implementation: Testnet Mint Events
+
+```
+from pachira import *
+
+base_pool_addr = '0x5FC8d32690cc91D4c39d9d3abcBD16989F875707'
+
+connect = ConnectW3(Net.LOCALHOST)
+connect.apply()
+
+abi = ABILoading(Platform.PACHIRA, JSONContract.IUniswapV2Pair)
+
+rEvents = RetrieveEvents(connect, abi)
+dict_events = rEvents.apply(EventType.MINT, base_pool_addr)
+```
+
+```javascript
+mint at block:7 tx:0x5b6bb5937981e4642696449ed6ca25474bf87dfe8d3f2717995fb70c0d7a6249
+mint at block:10 tx:0x6f8ba7bb4edf22845a7fe915a36d9310e85a155f162dd2a383d90f4a71606044
+.
+```
+
+```
+dict_events
+```
+
+```javascript
+{0: {'chain': 'localhost',
+  'contract': 'iuniswapv2pair',
+  'type': 'mint',
+  'platform': 'pachira',
+  'address': '0x387e3656de052275554f8d8b78c4b1a9b088345c',
+  'tx_hash': '0x5b6bb5937981e4642696449ed6ca25474bf87dfe8d3f2717995fb70c0d7a6249',
+  'blk_num': 7,
+  'timestamp': 1725038394,
+  'details': {'web3_type': web3._utils.datatypes.Mint,
+   'token0': '0x088Ba56A560dfF690a1C6feF26394F4C03821c4f',
+   'token1': '0x0165878A594ca255338adfa4d48449f69242Eb8F',
+   'amount0In': 100000000000000000000000,
+   'amount1Out': 100000000000000000000000}},
+ 1: {'chain': 'localhost',
+  'contract': 'iuniswapv2pair',
+  'type': 'mint',
+  'platform': 'pachira',
+  'address': '0x387e3656de052275554f8d8b78c4b1a9b088345c',
+  'tx_hash': '0x6f8ba7bb4edf22845a7fe915a36d9310e85a155f162dd2a383d90f4a71606044',
+  'blk_num': 10,
+  'timestamp': 1725038422,
+  'details': {'web3_type': web3._utils.datatypes.Mint,
+   'token0': '0x088Ba56A560dfF690a1C6feF26394F4C03821c4f',
+   'token1': '0x0165878A594ca255338adfa4d48449f69242Eb8F',
+   'amount0In': 25,
+   'amount1Out': 24}}}
+```
+
+## Implementation: Polygon Swap Events
 
 ```
 from pachira import *
