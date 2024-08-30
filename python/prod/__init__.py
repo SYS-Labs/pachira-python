@@ -19,6 +19,7 @@ from .data.pair import PairDetails
 from .utils.progress_update import ProgressUpdate
 from .utils.base_utils import BaseUtils
 from .contract.deploy import Deploy
+from .contract.view import ViewContract
 from .uniswap_v2.fetch_pair_details import FetchPairDetails
 from .token.token import Token
 from .utils.connect import ConnectW3

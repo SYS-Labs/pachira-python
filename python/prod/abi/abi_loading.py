@@ -55,6 +55,9 @@ class ABILoading:
     def get_platform_name(self):
         return self.__platform_name    
 
+    def get_abi_path(self):
+        return self.__abi_path      
+
     @lru_cache(maxsize=_CACHE_SIZE)
     def get_abi_by_filename(self, fname: str) -> dict:
         """Reads a embedded ABI file and returns it.
