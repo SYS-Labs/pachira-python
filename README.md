@@ -32,6 +32,7 @@ dict_events = rEvents.apply(EventType.SWAP, start_block=start_block, end_block=l
 dict_events
 ```
 
+```json
 {0: {'chain': 'polygon',
   'contract': 'uniswapv2pair',
   'type': 'swap',
@@ -84,6 +85,7 @@ dict_events
    'token1': '0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff',
    'amount0In': 0,
    'amount1Out': 0}}}
+```
 
 
 ## Pachira Uniswap V2: Localhost Testnet
