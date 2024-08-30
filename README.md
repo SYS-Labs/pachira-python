@@ -32,7 +32,7 @@ dict_events = rEvents.apply(EventType.SWAP, start_block=start_block, end_block=l
 dict_events
 ```
 
-```json
+```javascript
 {0: {'chain': 'polygon',
   'contract': 'uniswapv2pair',
   'type': 'swap',
