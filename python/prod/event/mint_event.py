@@ -6,6 +6,7 @@ from .event import Event
 from ..data.filter import Filter
 from .tools.conversion import Conversion
 from ..utils.connect import ConnectW3
+import math
 
 class MintEvent(Event):
 
@@ -34,8 +35,13 @@ class MintEvent(Event):
         event_record['details']['web3_type'] = event["event"]
         event_record['details']['token0'] = Conversion().convert_uint256_hex_string_to_address(topics[0])
         event_record['details']['token1'] = Conversion().convert_uint256_hex_string_to_address(topics[1])
-        event_record['details']['amount0In'] = Conversion().convert_int256_bytes_to_int(arguments[0]) 
-        event_record['details']['amount1Out'] = Conversion().convert_int256_bytes_to_int(arguments[1])  
+
+        if(len(arguments) == 1):
+            event_record['details']['amount0In'] = Conversion().convert_int256_bytes_to_int(arguments[0]) 
+            event_record['details']['amount1Out'] = math.nan 
+        elif(len(arguments) >= 1):
+            event_record['details']['amount0In'] = Conversion().convert_int256_bytes_to_int(arguments[0]) 
+            event_record['details']['amount1Out'] = Conversion().convert_int256_bytes_to_int(arguments[1])             
 
         return event_record
     

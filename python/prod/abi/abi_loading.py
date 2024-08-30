@@ -46,8 +46,8 @@ class ABILoading:
         self.__contract_name = DEFAULT_CONTRACT if contract == None else contract
         self.__abi_path = self.__platform_name + '/' + self.__contract_name + '.json'
 
-    def apply(self, web3: Web3):
-        return self.get_contract(web3, self.__abi_path)  
+    def apply(self, web3: Web3, address: Optional[str] = None):
+        return self.get_contract(web3, self.__abi_path, address)  
 
     def get_contract_name(self):
         return self.__contract_name
@@ -87,6 +87,7 @@ class ABILoading:
         self, 
         web3: Web3,
         fname: str | Path,
+        address: Optional[str] = None,
         bytecode: Optional[str] = None,
     ) -> Type[Contract]:
         """Create a Contract proxy class from our bundled contracts or filesystem..
@@ -123,8 +124,8 @@ class ABILoading:
     
         contract_interface = self.get_abi_by_filename(fname)
         abi = contract_interface["abi"]
-    
-        if bytecode is None:
+        
+        if address is None and bytecode is None:
             bytecode = contract_interface["bytecode"]
     
             if type(bytecode) == dict:
@@ -135,9 +136,15 @@ class ABILoading:
                 # Sol 0.6 / legacy
                 # Bytecode hex is directly in the key.
                 pass
-    
-        Contract = web3.eth.contract(abi=abi, bytecode=bytecode)
-        return Contract
+                
+            contract = web3.eth.contract(abi=abi, bytecode=bytecode)  
+            
+        elif address is not None and bytecode is None:
+            contract = web3.eth.contract(address=address, abi=abi)
+            
+
+        
+        return contract
     
     
     def get_linked_contract(

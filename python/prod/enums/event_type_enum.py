@@ -7,5 +7,6 @@ class EventTypeEnum:
     SWAP: str = "swap"
     BURN: str = "burn"
     SYNC: str = "sync"
+    TRANSFER: str = "transfer" 
     CREATE: str = "create" 
 
