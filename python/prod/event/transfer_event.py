@@ -6,14 +6,30 @@ from .event import Event
 from ..data.filter import Filter
 from .tools.conversion import Conversion
 from ..utils.connect import ConnectW3
+from ..enums.contracts_enum import JSONContractsEnum as JSONContracts
 import math
 
 class TransferEvent(Event):
 
     def __init__(self, connect_w3: ConnectW3):
-        self.__connect_w3 = connect_w3        
-                       
+        self.__connect_w3 = connect_w3 
+
     def record(self, event, abi_load):
+
+        event_record = {}
+        contract_type = abi_load.get_contract_name()
+
+        match contract_type:
+            case JSONContracts.IUniswapV2Pair:
+                event_record = self._uni_v2_record(event, abi_load)
+            case JSONContracts.UniswapV2Pair:
+                event_record = self._uni_v2_record(event, abi_load)                
+            case JSONContracts.UniswapV3Pool:
+                event_record = self._uni_v3_record(event, abi_load)                
+           
+        return event_record    
+                       
+    def _uni_v2_record(self, event, abi_load):
 
         topics = event["topics"]
         arguments = Conversion().decode_data(event["data"])        
@@ -42,6 +58,12 @@ class TransferEvent(Event):
             event_record['details']['transfer_value'] = math.nan
 
         return event_record
+
+    def _uni_v3_record(self, event, abi_load):
+
+        event_record = {}
+
+        return event_record    
         
     def filter(self, contract, addr = None):
         return Filter.create_filter(address=addr, event_types=[contract.events.Transfer])

@@ -28,7 +28,7 @@ class RetrieveEvents:
         dict_events = {}
         evt: LogResult
         for k, evt in enumerate(read_events):
-            key = evt["blockHash"] + evt["transactionHash"] + evt["logIndex"]        
+            key = evt["blockHash"] + evt["transactionHash"] + evt["logIndex"]    
             record_event = event.record(evt, self.__abi)
                
             dict_events[k] = record_event

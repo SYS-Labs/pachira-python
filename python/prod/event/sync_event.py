@@ -7,14 +7,30 @@ from .tools.conversion import Conversion
 from ..uniswap_v2.fetch_pair_details import FetchPairDetails
 from ..data.filter import Filter
 from ..utils.connect import ConnectW3
+from ..enums.contracts_enum import JSONContractsEnum as JSONContracts
 
 
 class SyncEvent(Event):
 
     def __init__(self, connect_w3: ConnectW3):
-        self.__connect_w3 = connect_w3   
-                     
+        self.__connect_w3 = connect_w3  
+
     def record(self, event, abi_load):
+
+        event_record = {}
+        contract_type = abi_load.get_contract_name()
+
+        match contract_type:
+            case JSONContracts.IUniswapV2Pair:
+                event_record = self._uni_v2_record(event, abi_load)
+            case JSONContracts.UniswapV2Pair:
+                event_record = self._uni_v2_record(event, abi_load)                
+            case JSONContracts.UniswapV3Pool:
+                event_record = self._uni_v3_record(event, abi_load)                
+           
+        return event_record    
+                     
+    def _uni_v2_record(self, event, abi_load):
 
         topics = event["topics"]
         arguments = Conversion().decode_data(event["data"])        
@@ -53,6 +69,12 @@ class SyncEvent(Event):
         event_record['details']['price'] = amt1_human/amt0_human
 
         return event_record
+
+    def _uni_v3_record(self, event, abi_load):
+
+        event_record = {}
+
+        return event_record     
      
     def filter(self, contract, addr = None):
         return Filter.create_filter(address=addr, event_types=[contract.events.Sync])

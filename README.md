@@ -189,7 +189,4 @@ dict_events
 
 ## Uniswap V3: Polygon
 
-* Swap: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/univ3/swap.ipynb)
-* Mint: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/univ3/mint.ipynb)
-* Burn: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/univ3/burn.ipynb)
-* Pool Creation: see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/univ3/pool_created.ipynb) 
+* Events (ie, Swap, Mint, Burn, Create): see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/pachira/test_univ3_events.ipynb)

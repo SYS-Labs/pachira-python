@@ -22,6 +22,9 @@ class InitEventEnum:
             case EventType.SYNC:
                 event = SyncEvent(connect)      
             case EventType.TRANSFER:
-                event = TransferEvent(connect)                    
+                event = TransferEvent(connect)     
+            case EventType.CREATE:
+                event = CreateEvent(connect)                    
+                           
            
         return event 
