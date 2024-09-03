@@ -1,4 +1,4 @@
-from .abi.abi_loading import ABILoading
+from .abi.abi_load import ABILoad
 from .event.tools.chain_reorganization_detection import ChainReorganizationDetected
 from .event.tools.rpc_reorganization_monitor import JSONRPCReorganizationMonitor
 from .event.tools.conversion import Conversion

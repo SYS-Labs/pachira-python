@@ -1,4 +1,4 @@
-from ...abi.abi_loading import ABILoading
+from ...abi.abi_load import ABILoad
 from ...enums.init_event_enum import InitEventEnum as InitEvent
 from ...utils.connect import ConnectW3
 from ..event import Event
@@ -9,7 +9,7 @@ import pandas as pd
 
 class RetrieveEvents:
 
-    def __init__(self, connect: ConnectW3, abi: ABILoading, verbose = True):
+    def __init__(self, connect: ConnectW3, abi: ABILoad, verbose = True):
         self.__connect = connect   
         self.__abi = abi 
         self.__w3 = self.__connect.get_w3()

@@ -39,7 +39,7 @@ DEFAULT_PLATFORM = PlatformsEnum.PACHIRA
 # How big are our ABI and contract caches
 _CACHE_SIZE = 512
 
-class ABILoading:
+class ABILoad:
 
     def __init__(self, platform = None, contract = None):
         self.__platform_name = DEFAULT_PLATFORM if platform == None else platform

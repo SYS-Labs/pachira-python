@@ -19,9 +19,9 @@ base_pool_addr = '0x5FC8d32690cc91D4c39d9d3abcBD16989F875707'
 connect = ConnectW3(Net.LOCALHOST)
 connect.apply()
 
-abi = ABILoading(Platform.PACHIRA, JSONContract.UniV2IndexedYieldLinearExitPool)
+abi = ABILoad(Platform.PACHIRA, JSONContract.UniV2IndexedYieldLinearExitPool)
 vContract = ViewContract(connect, abi)
-view_fns_res = vContract.apply(index_pool_addr)
+view_fns_res = vContract.apply(base_pool_addr)
 view_fns_res
 ```
 
@@ -51,7 +51,7 @@ base_pool_addr = '0x5FC8d32690cc91D4c39d9d3abcBD16989F875707'
 connect = ConnectW3(Net.LOCALHOST)
 connect.apply()
 
-abi = ABILoading(Platform.PACHIRA, JSONContract.IUniswapV2Pair)
+abi = ABILoad(Platform.PACHIRA, JSONContract.IUniswapV2Pair)
 
 rEvents = RetrieveEvents(connect, abi)
 dict_events = rEvents.apply(EventType.MINT, base_pool_addr)
@@ -101,7 +101,7 @@ dict_events
 ```
 from pachira import *
 
-abi = ABILoading(Platform.SUSHI, JSONContract.UniswapV2Pair)
+abi = ABILoad(Platform.SUSHI, JSONContract.UniswapV2Pair)
 connect = ConnectW3(Net.POLYGON)
 connect.apply()
 
