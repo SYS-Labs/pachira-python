@@ -96,7 +96,7 @@ dict_events
    'amount1Out': 24}}}
 ```
 
-## UniV2 Swap Events (Polygon) Example
+## Uni V2 Swap Events (Polygon) Example
 
 ```
 from pachira import *
@@ -178,7 +178,7 @@ dict_events
    'amount1Out': 0}}}
 ```
 
-## UniV3 Swap Events (Polygon) Example
+## Uni V3 Swap Events (Polygon) Example
 
 ```
 from pachira import *
