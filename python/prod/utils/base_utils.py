@@ -14,10 +14,10 @@ import psutil
 
 logger = logging.getLogger(__name__)
 
-class BaseUtils():
+#: Ethereum 0x0000000000000000000000000000000000000000 address as a string
+ZERO_ADDRESS_STR = "0x0000000000000000000000000000000000000000"    
 
-    #: Ethereum 0x0000000000000000000000000000000000000000 address as a string
-    ZERO_ADDRESS_STR = "0x0000000000000000000000000000000000000000"    
+class BaseUtils():
 
     def __init__(self):
         pass        

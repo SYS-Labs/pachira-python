@@ -28,7 +28,7 @@ from web3.contract.contract import Contract, ContractFunction
 # Cache loaded ABI files in-process memory for speedup
 from web3.datastructures import AttributeDict
 
-from eth_defi.utils import ZERO_ADDRESS_STR
+from ..utils.base_utils import ZERO_ADDRESS_STR
 
 from ..enums.platforms_enum import PlatformsEnum
 from ..enums.contracts_enum import JSONContractsEnum
