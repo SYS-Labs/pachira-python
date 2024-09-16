@@ -99,7 +99,7 @@ dict_events
 ## Uni V2 Swap Events (Polygon) Example
 
 ```
-from pachira import *
+from web3scout import *
 
 abi = ABILoad(Platform.SUSHI, JSONContract.UniswapV2Pair)
 connect = ConnectW3(Net.POLYGON)
@@ -181,7 +181,7 @@ dict_events
 ## Uni V3 Swap Events (Polygon) Example
 
 ```
-from pachira import *
+from web3scout import *
 
 abi = ABILoad(Platform.UNIV3, JSONContract.UniswapV3Pool)
 connect = ConnectW3(Net.POLYGON)
@@ -236,10 +236,6 @@ dict_events
    'amount1': 29656680135133456015}}}
 ```
 
-
-## Pachira Uniswap V2: Localhost Testnet
-
-* Basepool Events (ie, Swap, Mint, Sync, Burn, Transfer): see [notebook](https://github.com/SYS-Labs/pachira-python/blob/main/notebook/pachira/test_basepool_events.ipynb)
 
 ## Sushi Uniswap V2: Polygon 
 
