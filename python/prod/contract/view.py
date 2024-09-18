@@ -1,9 +1,9 @@
-from ..abi.abi_loading import ABILoading
+from ..abi.abi_load import ABILoad
 from ..utils.connect import ConnectW3
 
 class ViewContract():
 
-    def __init__(self, connect: ConnectW3, abi: ABILoading, verbose = False):
+    def __init__(self, connect: ConnectW3, abi: ABILoad, verbose = False):
         self.__connect = connect   
         self.__abi = abi 
         self.__w3 = self.__connect.get_w3()

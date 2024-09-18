@@ -11,7 +11,7 @@ from typing import Union, Optional
 from eth_typing import HexAddress
 from web3.contract import Contract
 
-from ..abi.abi_loading import ABILoading
+from ..abi.abi_load import ABILoad
 from ..data.token_details import TokenDetails
 from ..token.token import Token
 

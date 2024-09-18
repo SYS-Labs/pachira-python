@@ -8,7 +8,7 @@ from web3.exceptions import BadFunctionCallOutput, ContractLogicError
 from eth_typing import HexAddress
 from eth_tester.exceptions import TransactionFailed
 from ..data.token_details import TokenDetails
-from ..abi.abi_loading import ABILoading
+from ..abi.abi_load import ABILoad
 from ..utils.base_utils import BaseUtils
 
 _call_missing_exceptions = (TransactionFailed, BadFunctionCallOutput, ValueError, ContractLogicError)
@@ -137,7 +137,7 @@ class Token:
         if not chain_id:
             chain_id = web3.eth.chain_id
     
-        erc_20 = ABILoading().get_deployed_contract(web3, contract_name, token_address)
+        erc_20 = ABILoad().get_deployed_contract(web3, contract_name, token_address)
         key = TokenDetails.generate_cache_key(chain_id, token_address)
     
         if cache is not None:

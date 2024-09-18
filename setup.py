@@ -5,7 +5,7 @@ with open('README.md') as f:
 
 setup(
     name="pachira-python",
-    version="0.0.3",
+    version="0.0.2",
     description="Python library for Pachira on DeFi, data research and integration",
     long_description=long_description,
     long_description_content_type="text/markdown",    
@@ -35,8 +35,7 @@ setup(
                       'eth_utils', 
                       'web3-ethereum-defi',
                       'hexbytes', 
-                      'pandas',
-                      'blockscout-python == 0.1.2'],
+                      'pandas'],
     include_package_data=True,
     zip_safe=False,
 )

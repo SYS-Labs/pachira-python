@@ -7,7 +7,7 @@ from typing import Dict, TypeAlias, Union
 from eth_typing import HexAddress
 from web3.contract import Contract
 from web3 import Web3
-from ..abi.abi_loading import ABILoading
+from ..abi.abi_load import ABILoad
 
 #: Manage internal registry of deployed contracts
 #:
@@ -73,7 +73,7 @@ class Deploy():
     
         """
         if isinstance(contract, str):
-            Contract = ABILoading().get_contract(web3, contract)
+            Contract = ABILoad().get_contract(web3, contract)
     
             # Used in trace.py
             contract_name = contract.replace(".json", "")

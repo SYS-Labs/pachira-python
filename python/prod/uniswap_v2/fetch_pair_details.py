@@ -1,6 +1,6 @@
 from typing import Union, Optional
 from eth_typing import HexAddress
-from ..abi.abi_loading import ABILoading
+from ..abi.abi_load import ABILoad
 from ..data.pair import PairDetails
 from ..token.token import Token
 
@@ -44,7 +44,7 @@ class FetchPairDetails:
             assert reverse_token_order is None, f"Give either (base_token_address, quote_token_address) or reverse_token_order"
             reverse_token_order = int(base_token_address, 16) > int(quote_token_address, 16)
     
-        pool = ABILoading().get_deployed_contract(web3, "sushi/UniswapV2Pair.json", pair_contact_address)
+        pool = ABILoad().get_deployed_contract(web3, "sushi/UniswapV2Pair.json", pair_contact_address)
         token0_address = pool.functions.token0().call()
         token1_address = pool.functions.token1().call()
     
